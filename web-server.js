@@ -49,6 +49,13 @@ app.get('/bad',(req,res)=>{
         errorMessage:'Unable to process'
     })
 });
+
+app.get('/project',(req,res)=>{
+    res.render('project.hbs',{
+        pageTitle:"Projects Page"
+    });
+});
+
 app.listen(port,()=>{
     console.log(`Server is up and running at port ${port}`);
 });
